@@ -1,0 +1,25 @@
+#+TITLE: akari
+#+AUTHOR: calx
+
+* akari
+
+A directory server written entirely in lisp.
+
+This server was written to serve as a challenge (pun intended) in PrismCTF.
+
+Was accessible on:
+
+:host nyx.istaroth.xyz
+:port 54321
+
+** vulnerability
+
+- directory traversal:
+  
+  user can access files outside of intended directory, using ~../~ as
+  the url
+
+** note
+
+this vulnerability is (probably) not possible to be exploited from the
+browser, as browsers remove ~../~ part
